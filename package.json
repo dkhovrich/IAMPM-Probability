@@ -1,0 +1,32 @@
+{
+  "name": "iampm-probability",
+  "version": "1.0.0",
+  "description": "Probability app for IAMPM game",
+  "main": "./src/js/app.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w",
+    "build-production": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkhovrich/IAMPM-Probability.git"
+  },
+  "author": "IAMPM dev team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkhovrich/IAMPM-Probability/issues"
+  },
+  "homepage": "https://github.com/dkhovrich/IAMPM-Probability#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.1.0"
+  },
+  "dependencies": {
+    "lodash.random": "^3.2.0",
+    "normalize.css": "^7.0.0"
+  }
+}
