@@ -2,20 +2,20 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const isProduction = process.env.NODE_ENV="production";
+const isProduction = process.env.NODE_ENV = "production";
 
 module.exports = {
   // entry: './src/js/app.js',
   entry: {
-    app: './src/js/app.js',
-    vendor: './src/js/vendor.js'
+    app: './src/app.js',
+    vendor: './src/vendor.js'
   },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'assets'),
     library: 'app'
   },
-  devtool: "cheap-eval-source-map",
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -24,6 +24,20 @@ module.exports = {
           fallback: "style-loader",
           use: "css-loader"
         })
+      },
+      {
+        test: /\.scss$/,
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader", options: {
+            sourceMap: true
+          }
+        }, {
+          loader: "sass-loader", options: {
+            sourceMap: true
+          }
+        }]
       }
     ]
   },

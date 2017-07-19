@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IAMPM Probability</title>
+
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <i class="logo"></i>
+
+    <div class="controll-buttons">
+      <div class="controll-button">
+        <input type="radio" name="controll" value="1" checked onclick="app.setMode(1)">
+        <span>Кубики</span>
+      </div>
+      <div class="controll-button">
+        <input type="radio" name="controll" value="2" onclick="app.setMode(2)">
+        <span>Кубики Вероятности</span>
+      </div>
+      <div class="controll-button">
+        <input type="radio" name="controll" value="3" onclick="app.setMode(3)">
+        <span>Ответ Рынка</span>
+      </div>
+    </div>
+
+    <div id="cubes-container">
+      <div class="cube-result-container">
+        <span id="cube-result"></span>
+      </div>
+    </div>
+
+    <div id="probability-container" style="display: none">
+      <div class="random-container-inputs">
+        <select name="team-level" id="team-level">
+        <option value="0">Уровень 0</option>
+        <option value="1">Уровень 1</option>
+        <option value="2">Уровень 2</option>
+        <option value="3">Уровень 3</option>
+      </select>
+       <input type="number" id="random-benefit" min="1" placeholder="Польза (е.т.)"> 
+      </div>
+      <div class="random-result">
+        <div style="display:none" id="random-result" class="random-result-container">
+          <div class="fail">
+            <span id="random-fail"></span>
+          </div>
+          <div class="benefit">
+            <span id="random-benefit-value"></span>
+          </div>
+        </div>
+        <div style="display:none" class="dice" id="random-dice">
+          <div class="front">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="back">
+            <span></span>
+          </div>
+          <div class="right">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="left">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="top">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="market-container" style="display: none">
+      <div class="market-container-inputs">
+        <input type="number" id="market-sales" min="1" placeholder="Продажи"> 
+        <input type="number" id="market-cards" min="1" placeholder="Карты"> 
+
+        <span id="market-sales-result"></span>
+        <span id="market-cards-result"></span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="executeButton" type="button" onclick="app.execute()"></button>
+    </div>
+  </div>
+
+  <script src="assets/vendor.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+
+</html>
