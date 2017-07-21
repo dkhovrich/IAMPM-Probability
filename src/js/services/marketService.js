@@ -63,7 +63,7 @@ export default class MarketService {
   }
 
   getCarsResult(cardsInputVal) {
-    const index = random(0, this.cards.length - 1);
+    const index = _random(0, this.cards.length - 1);
     const card = this.cards[index];
 
     if (card.value === 0) {
