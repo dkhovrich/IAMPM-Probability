@@ -1,4 +1,4 @@
-import * as random from 'lodash.random';
+import _random from 'lodash/random';
 import {
   EXECUTE_BUTTON_ID,
   THROW_CUBE_BUTTON_TEXT,
@@ -20,7 +20,7 @@ export default class CubesService {
   }
 
   execute() {
-    const result = random(1, 16);
+    const result = _random(1, 16);
 
     setValue(CUBE_RESULT_CONTAINER_ID, result);
     setDisplay(CUBE_RESULT_CONTAINER_ID, 'flex');

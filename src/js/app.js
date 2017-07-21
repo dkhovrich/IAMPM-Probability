@@ -1,4 +1,3 @@
-import * as random from 'lodash.random';
 import 'normalize.css';
 import '../scss/style.scss';
 import '../scss/dice.scss';

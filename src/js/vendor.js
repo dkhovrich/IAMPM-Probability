@@ -1,1 +1,1 @@
-import 'lodash.random';
+import 'lodash/random';

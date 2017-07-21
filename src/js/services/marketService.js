@@ -1,4 +1,4 @@
-import * as random from 'lodash.random';
+import _random from 'lodash/random';
 import CardValue from '../models/cardValue';
 import {
   EXECUTE_BUTTON_ID,
@@ -58,7 +58,7 @@ export default class MarketService {
   }
 
   getSalesResult(salesInputVal) {
-    const index = random(0, this.sales.length - 1);
+    const index = _random(0, this.sales.length - 1);
     return Math.round(salesInputVal * this.sales[index] / 100);
   }
 
