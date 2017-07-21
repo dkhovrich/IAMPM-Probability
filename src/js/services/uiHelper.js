@@ -1,14 +1,7 @@
-export const CUBES_CONTAINER = 'cubes-container';
-export const PROBABILITY_CONTAINER = 'probability-container';
-export const MARKET_CONTAINER = 'market-container';
-export const CUBE_RESULT_CONTAINER = 'cube-result';
 export const EXECUTE_BUTTON_ID = 'executeButton';
-
-export function hideAll() {
-  setDisplay(CUBES_CONTAINER, 'none');
-  setDisplay(PROBABILITY_CONTAINER, 'none');
-  setDisplay(MARKET_CONTAINER, 'none');
-}
+export const THROW_CUBE_BUTTON_TEXT = 'Бросить кубики ;)';
+export const MARKET_BUTTON_TEXT = 'Тянуть карту';
+export const CUBE_DELAY = 3000;
 
 export function setDisplay(id, value) {
   const element = document.getElementById(id);

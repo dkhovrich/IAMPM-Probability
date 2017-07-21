@@ -7,8 +7,8 @@ const isProduction = process.env.NODE_ENV = "production";
 module.exports = {
   // entry: './src/js/app.js',
   entry: {
-    app: './src/app.js',
-    vendor: './src/vendor.js'
+    app: './src/js/app.js',
+    vendor: './src/js/vendor.js'
   },
   output: {
     filename: '[name].js',
