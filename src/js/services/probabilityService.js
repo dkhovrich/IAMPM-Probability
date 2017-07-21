@@ -1,4 +1,4 @@
-import _random from 'lodash/random';
+import random from 'lodash/random';
 import Chance from '../models/chance';
 import {
   EXECUTE_BUTTON_ID,
@@ -68,7 +68,7 @@ export default class ProbabilityService {
     if (!this.chanceMap.has(level)) return null;
 
     const items = this.chanceMap.get(level);
-    const index = _random(0, items.length - 1);
+    const index = random(0, items.length - 1);
     return items[index];
   }
 
