@@ -33,7 +33,7 @@ export default class MarketService {
 
   show() {
     setValue(EXECUTE_BUTTON_ID, MARKET_BUTTON_TEXT);
-    setDisplay(MARKET_CONTAINER_ID, 'flex');
+    setDisplay(MARKET_CONTAINER_ID, 'block');
   }
 
   hide() {

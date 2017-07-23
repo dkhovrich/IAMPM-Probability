@@ -1,9 +1,26 @@
 #market-container {
-  .market-container-inputs {
+  
+}
+.market-container-inputs {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-  }
+    
+    input {
+        display: block;
+        width: 220px;
+        height: 40px;
+        padding: 0 10px;
+        font-size: 20px;
+        line-height: 50px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+        box-sizing: border-box;
+
+        &:first-child {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+    }
 }

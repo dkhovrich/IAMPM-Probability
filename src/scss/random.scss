@@ -6,16 +6,22 @@
     select, input {
         display: block;
         width: 220px;
-        height: 50px;
+        height: 40px;
         font-size: 20px;
         line-height: 50px;
         border: 1px solid #ccc;
         border-radius: 4px;
         background-color: #fff;
+        box-sizing: border-box
     }
 
     select {
+        padding-left: 7px;
+        margin-top: 1rem;
         margin-bottom: 1rem;
+    }
+    input {
+        padding: 0 10px;
     }
 }
 .random-result {
@@ -33,14 +39,14 @@
     width: 100%;
 
     .fail {
-        color: #ff0000;
+        color: #be0000;
         font-size: 24px;
         font-weight: bold;
     }
 
     .benefit {
-        color: blue;
-        font-size: 24px;
+        color: #008abe;
+        font-size: 44px;
         font-weight: bold;
     }
 }

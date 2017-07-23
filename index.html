@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>IAMPM Probability</title>
 
+  <link rel="icon" type="image/png" href="http://iampm.club/wp-content/uploads/2015/04/favicon.png" />
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
@@ -17,22 +18,59 @@
 
     <div class="controll-buttons">
       <div class="controll-button">
-        <input type="radio" name="controll" value="1" checked onclick="app.setMode(1)">
-        <span>Кубики</span>
+        <input id="dice" type="radio" name="controll" value="1" checked onclick="app.setMode(1)">
+        <label for="dice">Кубики</label>
       </div>
       <div class="controll-button">
-        <input type="radio" name="controll" value="2" onclick="app.setMode(2)">
-        <span>Кубики Вероятности</span>
+        <input id="variaty-dice" type="radio" name="controll" value="2" onclick="app.setMode(2)">
+        <label for="variaty-dice">Кубики<br> Вероятности</label>
       </div>
       <div class="controll-button">
-        <input type="radio" name="controll" value="3" onclick="app.setMode(3)">
-        <span>Ответ Рынка</span>
+        <input id="market-response" type="radio" name="controll" value="3" onclick="app.setMode(3)">
+        <label for="market-response">Ответ<br> Рынка</label>
       </div>
     </div>
 
     <div id="cubes-container">
       <div class="cube-result-container">
-        <span id="cube-result"></span>
+        <div class="cube-result">
+          <div id="cube-result"></div>
+          <div class="dice" id="cube-dice" style="display:none">
+            <div class="front">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="back">
+              <span></span>
+            </div>
+            <div class="right">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="left">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="bottom">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -55,7 +93,42 @@
             <span id="random-benefit-value"></span>
           </div>
         </div>
-        <div style="display:none" class="dice" id="random-dice">
+        <div class="dice" id="random-dice" style="display:none">
+          <div class="front">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="back">
+            <span></span>
+          </div>
+          <div class="right">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="left">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="top">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="bottom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="dice dice2" id="random-dice2" style="display:none">
           <div class="front">
             <span></span>
             <span></span>
@@ -97,7 +170,9 @@
       <div class="market-container-inputs">
         <input type="number" id="market-sales" min="1" placeholder="Продажи"> 
         <input type="number" id="market-cards" min="1" placeholder="Карты"> 
+      </div>
 
+      <div class="market-container-result">
         <span id="market-sales-result"></span>
         <span id="market-cards-result"></span>
       </div>

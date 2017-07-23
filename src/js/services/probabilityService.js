@@ -12,6 +12,7 @@ import {
 const PROBABILITY_CONTAINER_ID = 'probability-container';
 const RESULT_CONTAINER_ID = 'random-result';
 const DICE_CONTAINER_ID = 'random-dice';
+const DICE_CONTAINER_ID_2 = 'random-dice2';
 const TEAM_LEVEL_INPUT_ID = 'team-level';
 const BENEFIT_INPUT_ID = 'random-benefit';
 const BENEFIT_VALUE_ID = 'random-benefit-value';
@@ -57,9 +58,11 @@ export default class ProbabilityService {
 
     setDisplay(RESULT_CONTAINER_ID, 'none');
     setDisplay(DICE_CONTAINER_ID, 'block');
+    setDisplay(DICE_CONTAINER_ID_2, 'block');
 
     setTimeout(() => {
       setDisplay(DICE_CONTAINER_ID, 'none');
+      setDisplay(DICE_CONTAINER_ID_2, 'none');
       setDisplay(RESULT_CONTAINER_ID, 'flex');
     }, CUBE_DELAY);
   }
