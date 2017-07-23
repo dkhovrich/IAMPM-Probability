@@ -10,6 +10,7 @@ import {
 const CUBES_CONTAINER_ID = 'cubes-container';
 const CUBE_RESULT_CONTAINER_ID = 'cube-result';
 const DICE_CONTAINER_ID = 'cube-dice';
+const DICE_CONTAINER_ID_2 = 'cube-dice2';
 
 export default class CubesService {
 	show() {
@@ -25,10 +26,12 @@ export default class CubesService {
 		const result = random(1, 12);
 
 		setDisplay(DICE_CONTAINER_ID, 'block');
+		setDisplay(DICE_CONTAINER_ID_2, 'block');
 		setDisplay(CUBE_RESULT_CONTAINER_ID, 'none');
 
 		setTimeout(() => {
 			setDisplay(DICE_CONTAINER_ID, 'none');
+			setDisplay(DICE_CONTAINER_ID_2, 'none');
 			setDisplay(CUBE_RESULT_CONTAINER_ID, 'flex');
 			setValue(CUBE_RESULT_CONTAINER_ID, result);
 		}, CUBE_DELAY);
