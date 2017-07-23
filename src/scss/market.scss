@@ -24,3 +24,25 @@
         }
     }
 }
+.market-container-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+
+        img {
+            width: 50px;
+            margin-right: 10px;
+        }
+    }
+    span {
+        color: #008abe;
+        font-size: 44px;
+    }
+}

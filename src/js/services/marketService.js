@@ -46,13 +46,13 @@ export default class MarketService {
 
     if (salesValue) {
       const salesResult = this.getSalesResult(salesValue);
-      setValue(SALES_RESULT_ID, `${salesResult} продажи`);
+      setValue(SALES_RESULT_ID, `${salesResult}`);
       setDisplay(SALES_RESULT_ID, 'flex');
     }
 
     if (cardsValue) {
       const сardsResult = this.getCarsResult(cardsValue);
-      setValue(CARDS_RESULT_ID, `${сardsResult} карты`);
+      setValue(CARDS_RESULT_ID, `${сardsResult}`);
       setDisplay(CARDS_RESULT_ID, 'flex');
     }
   }
