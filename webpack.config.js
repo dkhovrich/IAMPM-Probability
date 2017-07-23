@@ -1,11 +1,9 @@
+/*eslint-disable*/
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-const isProduction = process.env.NODE_ENV = "production";
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  // entry: './src/js/app.js',
   entry: {
     app: './src/js/app.js',
     vendor: './src/js/vendor.js'
@@ -15,24 +13,24 @@ module.exports = {
     path: path.resolve(__dirname, 'assets'),
     library: 'app'
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   module: {
     rules: [{
       test: /\.css$/,
       use: ExtractTextPlugin.extract({
-        fallback: "style-loader",
-        use: "css-loader"
+        fallback: 'style-loader',
+        use: 'css-loader'
       })
     }, {
       test: /\.scss$/,
       use: [{
-        loader: "style-loader"
+        loader: 'style-loader'
       }, {
-        loader: "css-loader", options: {
+        loader: 'css-loader', options: {
           sourceMap: true
         }
       }, {
-        loader: "sass-loader", options: {
+        loader: 'sass-loader', options: {
           sourceMap: true
         }
       }]
@@ -43,13 +41,13 @@ module.exports = {
       test: /\.js$/,
       exclude: /(node_modules|bower_components)/,
       use: [
-        "babel-loader",
-        "eslint-loader",
+        'babel-loader',
+        'eslint-loader',
       ],
     }]
   },
   plugins: [
     new CleanWebpackPlugin(['assets']),
-    new ExtractTextPlugin("style.css"),
+    new ExtractTextPlugin('style.css'),
   ]
 };
