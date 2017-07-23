@@ -36,7 +36,7 @@ module.exports = {
       }]
     }, {
       test: /\.(png|svg|jpg|gif)$/,
-      use: ['file-loader']
+      use: ['file-loader?name=[name].[ext]']
     }, {
       test: /\.js$/,
       exclude: /(node_modules|bower_components)/,

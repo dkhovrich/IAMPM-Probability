@@ -4,6 +4,8 @@ import '../scss/dice.scss';
 import '../scss/random.scss';
 import '../scss/cube.scss';
 import '../scss/market.scss';
+import '../img/cards.png';
+import '../img/charts.png';
 
 import Mode from './models/mode';
 import {
