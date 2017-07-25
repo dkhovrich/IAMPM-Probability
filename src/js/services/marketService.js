@@ -69,7 +69,8 @@ export default class MarketService {
 		if (card.value === 0) {
 			return card.isPositive ? cardsInputVal : 0;
 		} else {
-			return card.isPositive ? cardsInputVal + card.value : cardsInputVal - card.value;
+			const result = card.isPositive ? cardsInputVal + card.value : cardsInputVal - card.value;
+			return result < 0 ? 0 : result;
 		}
 	}
 }
