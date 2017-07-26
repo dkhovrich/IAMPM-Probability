@@ -1,5 +1,5 @@
 export const EXECUTE_BUTTON_ID = 'executeButton';
-export const THROW_CUBE_BUTTON_TEXT = 'Бросить кубики ;)';
+export const THROW_CUBE_BUTTON_TEXT = 'Бросить кубики';
 export const MARKET_BUTTON_TEXT = 'Тянуть карту';
 export const CUBE_DELAY = 3000;
 

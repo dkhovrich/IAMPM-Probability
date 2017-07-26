@@ -117,7 +117,7 @@
         <option value="2">Уровень 2</option>
         <option value="3">Уровень 3</option>
       </select>
-       <input type="number" id="random-benefit" min="1" placeholder="Польза (е.т.)"> 
+       <input type="number" id="random-benefit" min="1" placeholder="Польза (е.т.)" pattern="[09]*">
       </div>
       <div class="random-result">
         <div style="display:none" id="random-result" class="random-result-container">
@@ -203,18 +203,23 @@
 
     <div id="market-container" style="display: none">
       <div class="market-container-inputs">
-        <input type="number" id="market-sales" min="1" placeholder="Продажи"> 
-        <input type="number" id="market-cards" min="1" placeholder="Карты"> 
+        <input type="number" id="market-sales" min="1" placeholder="Продажи" pattern="[09]*">
+        <input type="number" id="market-cards" min="1" placeholder="Карты" pattern="[09]*">
       </div>
 
       <div class="market-container-result">
-        <div class="market-sales-result">
-          <img src="assets/charts.png" alt="">
-          <span id="market-sales-result"></span>
-        </div>
-        <div class="market-cards-result">
-          <img src="assets/cards.png" alt="">
-          <span id="market-cards-result"></span>
+
+        <div id="market-card" class="market-card flip" style="display: none"></div>
+
+        <div id="market-container-result" style="display: none">
+          <div class="market-sales-result">
+            <img src="assets/charts.png" alt="">
+            <span id="market-sales-result"></span>
+          </div>
+          <div class="market-cards-result">
+            <img src="assets/cards.png" alt="">
+            <span id="market-cards-result"></span>
+          </div>
         </div>
       </div>
     </div>

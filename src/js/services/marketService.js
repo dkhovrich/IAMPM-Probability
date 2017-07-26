@@ -3,12 +3,15 @@ import CardValue from '../models/cardValue';
 import {
 	EXECUTE_BUTTON_ID,
 	MARKET_BUTTON_TEXT,
+	CUBE_DELAY,
 	setDisplay,
 	setValue,
 	getValue
 } from './uiHelper';
 
 const MARKET_CONTAINER_ID = 'market-container';
+const MARKET_CONTAINER_RESULT_ID = 'market-container-result';
+const MARKET_CARD_ID = 'market-card';
 const SALES_INPUT_ID = 'market-sales';
 const CARDS_INPUT_ID = 'market-cards';
 const SALES_RESULT_ID = 'market-sales-result';
@@ -43,17 +46,25 @@ export default class MarketService {
 	execute() {
 		const salesValue = +getValue(SALES_INPUT_ID);
 		const cardsValue = +getValue(CARDS_INPUT_ID);
+		setDisplay(MARKET_CONTAINER_RESULT_ID, 'none');
+		setDisplay(MARKET_CARD_ID, 'block');
 
 		if (salesValue) {
-			const salesResult = this.getSalesResult(salesValue);
-			setValue(SALES_RESULT_ID, `${salesResult}`);
-			setDisplay(SALES_RESULT_ID, 'flex');
+			setTimeout(() => {
+				const salesResult = this.getSalesResult(salesValue);
+				setValue(SALES_RESULT_ID, `${salesResult}`);
+				setDisplay(MARKET_CONTAINER_RESULT_ID, 'flex');
+				setDisplay(MARKET_CARD_ID, 'none');
+			}, CUBE_DELAY);
 		}
 
 		if (cardsValue) {
-			const сardsResult = this.getCarsResult(cardsValue);
-			setValue(CARDS_RESULT_ID, `${сardsResult}`);
-			setDisplay(CARDS_RESULT_ID, 'flex');
+			setTimeout(() => {
+				const сardsResult = this.getCarsResult(cardsValue);
+				setValue(CARDS_RESULT_ID, `${сardsResult}`);
+				setDisplay(MARKET_CONTAINER_RESULT_ID, 'flex');
+				setDisplay(MARKET_CARD_ID, 'none');
+			}, CUBE_DELAY);
 		}
 	}
 
