@@ -44,15 +44,16 @@ export default class ProbabilityService {
 
 	execute() {
 		const teamLevel = +getValue(TEAM_LEVEL_INPUT_ID);
-		const benefit = +getValue(BENEFIT_INPUT_ID);
+		const benefitInputValue = getValue(BENEFIT_INPUT_ID);
+
+		if (!benefitInputValue || benefitInputValue < 0) return;
+		const benefit = +benefitInputValue;
 
 		const result = this.getChance(teamLevel);
 		if (!result) return;
 
-		if (benefit) {
-			const benefitValue = this.calculateBenefitValue(benefit, result.fail);
-			setValue(BENEFIT_VALUE_ID, `${benefitValue} е.т.`);
-		}
+		const benefitValue = this.calculateBenefitValue(benefit, result.fail);
+		setValue(BENEFIT_VALUE_ID, `${benefitValue} е.т.`);
 
 		setValue(FAIL_VALUE_Id, `${result.fail}% ошибок`);
 

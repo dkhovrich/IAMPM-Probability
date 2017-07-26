@@ -44,28 +44,29 @@ export default class MarketService {
 	}
 
 	execute() {
-		const salesValue = +getValue(SALES_INPUT_ID);
-		const cardsValue = +getValue(CARDS_INPUT_ID);
+		const salesValueInputValue = getValue(SALES_INPUT_ID);
+		const cardsValueInputValue = getValue(CARDS_INPUT_ID);
+
+		if (!salesValueInputValue || !cardsValueInputValue || salesValueInputValue < 0 || cardsValueInputValue < 0) return;
+		const salesValue = +salesValueInputValue;
+		const cardsValue = +cardsValueInputValue;
+
 		setDisplay(MARKET_CONTAINER_RESULT_ID, 'none');
 		setDisplay(MARKET_CARD_ID, 'block');
 
-		if (salesValue) {
-			setTimeout(() => {
-				const salesResult = this.getSalesResult(salesValue);
-				setValue(SALES_RESULT_ID, `${salesResult}`);
-				setDisplay(MARKET_CONTAINER_RESULT_ID, 'flex');
-				setDisplay(MARKET_CARD_ID, 'none');
-			}, CUBE_DELAY);
-		}
+		setTimeout(() => {
+			const salesResult = this.getSalesResult(salesValue);
+			setValue(SALES_RESULT_ID, `${salesResult}`);
+			setDisplay(MARKET_CONTAINER_RESULT_ID, 'flex');
+			setDisplay(MARKET_CARD_ID, 'none');
+		}, CUBE_DELAY);
 
-		if (cardsValue) {
-			setTimeout(() => {
-				const сardsResult = this.getCarsResult(cardsValue);
-				setValue(CARDS_RESULT_ID, `${сardsResult}`);
-				setDisplay(MARKET_CONTAINER_RESULT_ID, 'flex');
-				setDisplay(MARKET_CARD_ID, 'none');
-			}, CUBE_DELAY);
-		}
+		setTimeout(() => {
+			const сardsResult = this.getCarsResult(cardsValue);
+			setValue(CARDS_RESULT_ID, `${сardsResult}`);
+			setDisplay(MARKET_CONTAINER_RESULT_ID, 'flex');
+			setDisplay(MARKET_CARD_ID, 'none');
+		}, CUBE_DELAY);
 	}
 
 	getSalesResult(salesInputVal) {
