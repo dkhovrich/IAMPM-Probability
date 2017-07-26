@@ -3,7 +3,7 @@ import Chance from '../models/chance';
 import {
 	EXECUTE_BUTTON_ID,
 	THROW_CUBE_BUTTON_TEXT,
-	CUBE_DELAY,
+	ANIMATION_DELAY,
 	setDisplay,
 	setValue,
 	getValue
@@ -65,7 +65,7 @@ export default class ProbabilityService {
 			setDisplay(DICE_CONTAINER_ID, 'none');
 			setDisplay(DICE_CONTAINER_ID_2, 'none');
 			setDisplay(RESULT_CONTAINER_ID, 'flex');
-		}, CUBE_DELAY);
+		}, ANIMATION_DELAY);
 	}
 
 	getChance(level) {

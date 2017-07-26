@@ -2,7 +2,7 @@ import random from 'lodash/random';
 import {
 	EXECUTE_BUTTON_ID,
 	THROW_CUBE_BUTTON_TEXT,
-	CUBE_DELAY,
+	ANIMATION_DELAY,
 	setDisplay,
 	setValue
 } from './uiHelper';
@@ -34,6 +34,6 @@ export default class CubesService {
 			setDisplay(DICE_CONTAINER_ID_2, 'none');
 			setDisplay(CUBE_RESULT_CONTAINER_ID, 'flex');
 			setValue(CUBE_RESULT_CONTAINER_ID, result);
-		}, CUBE_DELAY);
+		}, ANIMATION_DELAY);
 	}
 }

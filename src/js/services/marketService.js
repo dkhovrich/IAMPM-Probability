@@ -3,7 +3,7 @@ import CardValue from '../models/cardValue';
 import {
 	EXECUTE_BUTTON_ID,
 	MARKET_BUTTON_TEXT,
-	CUBE_DELAY,
+	ANIMATION_DELAY,
 	setDisplay,
 	setValue,
 	getValue
@@ -56,17 +56,14 @@ export default class MarketService {
 
 		setTimeout(() => {
 			const salesResult = this.getSalesResult(salesValue);
-			setValue(SALES_RESULT_ID, `${salesResult}`);
-			setDisplay(MARKET_CONTAINER_RESULT_ID, 'flex');
-			setDisplay(MARKET_CARD_ID, 'none');
-		}, CUBE_DELAY);
-
-		setTimeout(() => {
 			const сardsResult = this.getCarsResult(cardsValue);
+
+			setValue(SALES_RESULT_ID, `${salesResult}`);
 			setValue(CARDS_RESULT_ID, `${сardsResult}`);
+
 			setDisplay(MARKET_CONTAINER_RESULT_ID, 'flex');
 			setDisplay(MARKET_CARD_ID, 'none');
-		}, CUBE_DELAY);
+		}, ANIMATION_DELAY);
 	}
 
 	getSalesResult(salesInputVal) {
