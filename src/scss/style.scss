@@ -44,7 +44,13 @@ body {
 }
 .controll-buttons {
     display: flex;
-    flex: row wrap;
+    flex-flow: row wrap;
+
+    a {
+        width: 100%;
+        color: #fff;
+        text-align: center;
+    }
 }
 .controll-button {
     display: flex;
