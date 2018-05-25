@@ -23,7 +23,7 @@ export default class CubesService {
 	}
 
 	execute() {
-		const result = random(1, 12);
+		const result = random(2, 12);
 
 		setDisplay(DICE_CONTAINER_ID, 'block');
 		setDisplay(DICE_CONTAINER_ID_2, 'block');
