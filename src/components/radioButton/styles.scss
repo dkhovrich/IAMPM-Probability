@@ -1,0 +1,54 @@
+.controll-button {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 33.33333333%;
+    margin: 0.5rem 0;
+    
+    input {
+        display: none;
+
+        &:checked {
+
+            + label {
+
+                &::after {
+                    transform: translateX(-50%) scale(1);
+                }
+            }
+        }
+    }
+    label {
+        position: relative;
+        padding-top: 1.8rem;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: block;
+            width: 20px;
+            height: 20px;
+            content: '';
+            border-radius: 50%;
+            background-color: #fff;
+            transform: translateX(-50%);
+        }
+        &::after {
+            position: absolute;
+            top: 4px;
+            left: 50%;
+            display: block;
+            width: 12px;
+            height: 12px;
+            content: '';
+            border-radius: 50%;
+            background-color:#008abe;
+            transform: translateX(-50%) scale(0);
+            transition: transform .4s;
+        }
+    }
+}
