@@ -1,41 +1,16 @@
 {
   "name": "iampm-probability",
-  "version": "1.0.0",
-  "description": "Probability app for IAMPM game",
-  "main": "./src/js/app.js",
-  "scripts": {
-    "build": "webpack",
-    "watch": "webpack -w",
-    "build-production": "webpack -p"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dkhovrich/IAMPM-Probability.git"
-  },
-  "author": "IAMPM dev team",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dkhovrich/IAMPM-Probability/issues"
-  },
-  "homepage": "https://github.com/dkhovrich/IAMPM-Probability#readme",
-  "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-plugin-lodash": "^3.2.11",
-    "babel-preset-env": "^1.6.0",
-    "clean-webpack-plugin": "^0.1.16",
-    "css-loader": "^0.28.4",
-    "eslint": "^4.3.0",
-    "eslint-loader": "^1.9.0",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "file-loader": "^0.11.2",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
-    "webpack": "^3.3.0"
-  },
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "lodash": "^4.17.4",
-    "normalize.css": "^7.0.0"
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
